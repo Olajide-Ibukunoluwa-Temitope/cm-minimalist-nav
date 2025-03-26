@@ -1,0 +1,72 @@
+:root {
+  --active-color: black;
+  --hover-color: #5091d3;
+  --background-color: #white;
+  --nav-bg: white;
+  --nav-border: #ddd;
+  --nav-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background: var(--nav-bg);
+  padding: 10px 20px;
+  width: 80%;
+  border-bottom: 1px solid var(--nav-border);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  position: relative;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: lightgray;
+}
+
+.nav-item:hover {
+  color: var(--hover-color);
+}
+
+.nav-item.active {
+  color: var(--active-color);
+}
+
+.city-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--hover-color);
+  margin-top: 1.5rem;
+}
+
+.indicator {
+  position: absolute;
+  height: 1px;
+  background: var(--active-color);
+  bottom: -1px;
+  left: 0;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  border-radius: 2px;
+}
